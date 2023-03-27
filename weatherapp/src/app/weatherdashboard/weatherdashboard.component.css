@@ -1,0 +1,140 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.containerr {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  flex: 1 1 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.time {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.day {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.greetings {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Styles for the right side of the card */
+.weather-card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.weather-card-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.weather-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-icon img {
+  width: 100px;
+  height: 70px;
+}
+
+.search {
+  margin: 20px;
+ 
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+
+/* Styles for the weather details container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.container .left {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .right {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}

@@ -1,0 +1,76 @@
+
+<div class="containerr">
+    <div class="card">
+    <div class="left">
+        <div class="time">
+            <p>{{ currentTime | date:'shortTime' }}</p>
+        </div>
+        <div class="day">
+            <p>{{ currentTime |  date:'fullDate' }}</p>
+        </div>
+        <div class="greetings">
+            <p>{{ greeting }}!</p>
+        </div>
+        <div class="card-text">
+          <p>{{ summary }}</p>
+          <p>{{ temperature }} &deg;C</p>
+          <p>{{ getWeatherSuggestion() }}</p>
+        </div>
+        
+    </div>
+    <div class="card-line"></div>
+    <div class="right">
+    <div class="weather-card">
+        <div class="weather-card-header">
+          <h2>Current Weather</h2>
+        </div>
+        <div class="weather-card-body">
+          <div class="weather-icon">
+            <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-22-256.png" alt="Weather Icon">
+          </div>
+        
+        </div>
+      
+      
+        <body>
+          <div class="search">
+            <form #form="ngForm" (submit)="onSearch()">
+              <div class="search-bar">
+                <input type="text" placeholder="Enter a City" name="city" [(ngModel)]="city">
+                <button type="submit" aria-label="search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        
+          <div class="container">
+        
+            <div class="left">
+        
+              <div class="data">
+                <div class="place">{{newCity.charAt(0).toUpperCase() + newCity.slice(1)}}</div>
+              </div>
+              <div class="temp">{{temperature}}&deg;C</div>
+            </div>
+        
+            <div class="right">
+              <div class="info">
+                <div class="text">Weather Conditions: <span>{{summary}}</span></div>
+                <div class="text">Feels like: <span>{{feelsLike}}&deg;C</span></div>
+                <div class="text">Humidity: <span>{{humidity}}%</span></div>
+                <div class="text">Pressure: <span>{{pressure}} hPa</span></div>
+                <div class="text">Visibility: <span>{{visibility}} km</span></div>
+                <div class="text">Wind speed: <span>{{wind}} km/h</span></div>
+              </div>
+        
+            </div>
+          </div>
+        </body>
+        </div>
+        
+
+      </div>
+    
+
+    
