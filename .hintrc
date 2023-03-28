@@ -3,19 +3,6 @@
     "development"
   ],
   "hints": {
-    "axe/forms": [
-      "default",
-      {
-        "label": "off"
-      }
-    ],
-    "no-inline-styles": "off",
-    "axe/text-alternatives": [
-      "default",
-      {
-        "image-alt": "off"
-      }
-    ],
-    "detect-css-reflows/layout": "off"
+    "disown-opener": "off"
   }
 }

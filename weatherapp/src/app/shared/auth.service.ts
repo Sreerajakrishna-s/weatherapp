@@ -28,35 +28,17 @@ export class AuthService {
   }
 
   // register method
-  register(email : string, password : string) {
+  signup(email : string, password : string) {
     this.fireauth.createUserWithEmailAndPassword(email, password).then( res => {
       alert('Registration Successful');
       this.sendEmailForVarification(res.user);
       this.router.navigate(['/login']);
     }, err => {
       alert(err.message);
-      this.router.navigate(['/register']);
+      this.router.navigate(['/signup']);
     })
   }
 
-  // sign out
-  logout() {
-    this.fireauth.signOut().then( () => {
-      localStorage.removeItem('token');
-      this.router.navigate(['/login']);
-    }, err => {
-      alert(err.message);
-    })
-  }
-
-  // forgot password
-  forgotPassword(email : string) {
-      this.fireauth.sendPasswordResetEmail(email).then(() => {
-        this.router.navigate(['/verify-email']);
-      }, err => {
-        alert('Something went wrong');
-      })
-  }
 
   // email varification
   sendEmailForVarification(user : any) {
@@ -72,7 +54,7 @@ export class AuthService {
   googleSignIn() {
     return this.fireauth.signInWithPopup(new GoogleAuthProvider).then(res => {
 
-      this.router.navigate(['/Weatherdashboard']);
+      this.router.navigate(['/weatherdashboard']);
       localStorage.setItem('token',JSON.stringify(res.user?.uid));
 
     }, err => {

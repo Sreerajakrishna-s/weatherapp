@@ -12,13 +12,16 @@ const routes: Routes = [
   {
     path: 'signup', component: SignupComponent
   },
+  {
+    path: 'login', component: LoginComponent
+  },
  
   {
     path: 'weatherdashboard', component: WeatherdashboardComponent
   },
-  {
-    path: '**', component: PagenotfoundComponent
-  },
+  // {
+  //   path: '', component: PagenotfoundComponent
+  // },
 ];
 
 @NgModule({
